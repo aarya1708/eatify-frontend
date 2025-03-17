@@ -1,0 +1,67 @@
+[
+    {
+      "id": 1,
+      "name": "McDonald's",
+      "rating": 4.5,
+      "time_to_deliver": "15-20 mins",
+      "items": "Burgers, Beverages, Cafe, Desserts",
+      "image_url": "mcd.jpeg"
+    },
+    {
+      "id": 2,
+      "name": "Subway",
+      "rating": 4.3,
+      "time_to_deliver": "20-25 mins",
+      "items": "Sandwich, Salads, Wraps, Beverages",
+      "image_url": "subway.avif"
+    },
+    {
+      "id": 3,
+      "name": "Pizza Hut",
+      "rating": 4.2,
+      "time_to_deliver": "20-25 mins",
+      "items": "Pizza, Pastas, Garlic Breads, Beverages",
+      "image_url": "pizzahut.avif"
+    },
+    {
+      "id": 4,
+      "name": "Temptations",
+      "rating": 4.4,
+      "time_to_deliver": "30-35 mins",
+      "items": "Sizzlers, Continental, Thai, Punjabi",
+      "image_url": "temptations.jpg"
+    },
+    {
+      "id": 5,
+      "name": "Domino's Pizza",
+      "rating": 4.3,
+      "time_to_deliver": "15-20 mins",
+      "items": "Pizzas, Italian, Pastas, Desserts",
+      "image_url": "dominos.avif"
+    },
+    {
+      "id": 6,
+      "name": "Kakke Di Hatti",
+      "rating": 4.1,
+      "time_to_deliver": "25-30 mins",
+      "items": "Punjabi, Chinese, Soups, Beverages",
+      "image_url": "kakke-di-hatti.jpg"
+    },
+    {
+      "id": 7,
+      "name": "KFC",
+      "rating": 4.3,
+      "time_to_deliver": "15-20 mins",
+      "items": "Burgers, Fast Food, Wings, Rolls",
+      "image_url": "kfc.webp"
+    },
+    {
+      "id": 8,
+      "name": "United Farmers Creamery",
+      "rating": 4.4,
+      "time_to_deliver": "15-20 mins",
+      "items": "Ice Cream, Shakes, Waffle, Desserts",
+      "image_url": "ufc.jpg"
+    }
+]
+  

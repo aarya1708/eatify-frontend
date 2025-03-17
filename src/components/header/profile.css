@@ -1,0 +1,95 @@
+/* Background Gradient */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image:linear-gradient(rgb(250, 197, 245), rgb(252, 204, 204), rgb(255, 210, 210));
+}
+
+/* Profile Card */
+.profile-card {
+    width: 50%;
+    height: 60vh;
+    background-color: rgb(249, 240, 249);
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    position: relative;
+}
+
+/* Profile Image */
+.profile-image {
+    position: absolute;
+    top: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.profile-image img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+/* Connect & Message */
+.connect-message {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    margin-top: 40px;
+}
+
+.connect,
+.message {
+    font-size: 14px;
+    font-weight: bold;
+    color: #ff758c;
+    cursor: pointer;
+}
+
+/* Profile Info */
+.profile-name {
+    font-size: 22px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 0;
+}
+
+.profile-location {
+    color: gray;
+    font-size: 14px;
+}
+
+.profile-job,
+.profile-university {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Profile Stats */
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    margin: 15px 0;
+}
+
+.stat-number {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Show More Button */
+.show-more {
+    background-color :rgb(215, 145, 179);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+

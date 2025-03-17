@@ -1,0 +1,116 @@
+/* .menu-container {
+    width: 60%;
+    margin: auto;
+}
+
+.info-box {
+    padding: 5px;
+    border-radius: 18px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.772), rgba(203, 203, 203, 0.274));
+}
+
+.top3picks {
+    padding: 5px;
+    border-radius: 18px;
+}
+
+.top3imagebox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menuitem-img {
+    border-radius: 10px;
+    width: 150px;
+}
+
+.cart-btn-menu {
+    width: 120px;
+    transform: translate(12.5%, -50%);
+    color: black;
+    font-size: 16px;
+    padding: 3px 6px;
+    border: 5;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+} */
+
+
+
+
+.menu-container {
+    width: 60%;
+    margin: auto;
+}
+
+.info-box {
+    padding: 5px;
+    border-radius: 18px;
+    background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.772), rgba(203, 203, 203, 0.274));
+}
+
+.top3picks {
+    padding: 5px;
+    border-radius: 18px;
+}
+
+.top3imagebox {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.menuitem-img {
+    border-radius: 10px;
+    width: 150px;
+}
+
+.cart-btn-menu {
+    width: 120px;
+    transform: translate(12.5%, -50%);
+    color: black;
+    font-size: 16px;
+    padding: 3px 6px;
+    border: 5;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    height: 30px;
+}
+
+.quantity-controls {
+    display: flex;
+    transform: translate(0%, -50%);
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    /* margin-top: 5px; */
+}
+
+.quantity-btn {
+    width: 40px;
+    height: 30px;
+    color: black;
+    font-size: 16px;
+    padding: 3px 6px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.quantity-btn:hover {
+    background-color: rgb(230, 230, 230);
+}
+
+.quantity-btn:active {
+    transform: scale(0.95);
+}
+

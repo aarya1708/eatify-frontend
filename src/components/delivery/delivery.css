@@ -1,0 +1,212 @@
+/* Main Layout & Container Styling */
+.container-fluid {
+  /* background-color: #f9f9f9; */
+  margin-top: -22px;
+  overflow-x: hidden;
+}
+
+/* Header Styling */
+.header-divider h2 {
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+}
+
+.header-divider hr {
+  border: none;
+  height: 3px;
+  background: linear-gradient(to right, #4a90e2, #50c878);
+  margin-bottom: 25px;
+  margin-top: 0;
+  border-radius: 2px;
+}
+
+/* Sidebar Styling */
+.sidebar {
+  transition: all 0.3s ease;
+  background-color: #ffffff;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.05);
+  position: relative;
+  padding-top: 20px !important;
+}
+
+.sidebar-divider {
+  border-right: none;
+}
+
+/* Sidebar Toggle Button */
+.toggle-button {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  background-color: #ffffff;
+  color: #4a90e2;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 50%;
+  border: 2px solid #4a90e2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  margin: 0 auto 20px;
+}
+
+.toggle-button:hover {
+  background-color: #4a90e2;
+  color: white;
+  transform: scale(1.1);
+}
+
+/* Sidebar Buttons */
+.sidebar-button {
+  width: 95%;
+  padding: 12px 15px;
+  margin: 10px auto;
+  text-align: left;
+  background-color: #ffffff;
+  border-radius: 8px;
+  color: #555555;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+  border-left: 4px solid transparent;
+}
+
+.sidebar-button:hover {
+  background-color: #f0f7ff;
+  border-left: 4px solid #4a90e2;
+  transform: translateX(5px);
+}
+
+/* Active Button Style */
+.sidebar-button.active {
+  background-color: #eaf5ff;
+  color: #4a90e2;
+  font-weight: 600;
+  border-left: 4px solid #4a90e2;
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.1);
+}
+
+/* Cards Styling */
+.card {
+  border-radius: 12px;
+  border: none;
+  background-color: #ffffff;
+  transition: all 0.3s ease;
+  margin-bottom: 18px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+/* Order Details Text */
+.card-body .mb-1.fw-bold {
+  color: #333;
+  font-size: 1.1rem;
+  margin-bottom: 12px !important;
+}
+
+.card-body .text-muted {
+  color: #6c757d !important;
+  font-size: 0.9rem;
+  margin-bottom: 6px !important;
+}
+
+.card-body .fs-5.fw-bold {
+  color: #4a90e2;
+  font-size: 1.3rem !important;
+}
+
+/* Button Styling */
+.btn {
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  text-transform: capitalize;
+}
+
+.btn-success {
+  background-color: #50c878;
+  color: white;
+  border: none;
+}
+
+.btn-success:hover {
+  background-color: #3cb371;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(80, 200, 120, 0.2);
+}
+
+.btn-primary {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background-color: #3a7bc8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(74, 144, 226, 0.2);
+}
+
+/* Status Button */
+.border.border-success {
+  color: #28a745;
+  background-color: #d4edda;
+  border-color: #28a745 !important;
+  font-weight: 600;
+  padding: 6px 14px;
+}
+
+/* Earnings Text */
+.fw-bold.mt-2 {
+  color: #50c878;
+  font-size: 1rem;
+}
+
+/* Support Section */
+.col h3 {
+  color: #4a90e2;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.col ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-top: 20px;
+}
+
+.col ul li {
+  padding: 10px 15px;
+  margin-bottom: 10px;
+  background-color: #f8f9fa;
+  border-radius: 8px;
+  border-left: 3px solid #4a90e2;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    height: 100vh;
+    z-index: 1000;
+  }
+  
+  .col.vh-100 {
+    margin-left: 60px;
+  }
+}

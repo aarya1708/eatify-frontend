@@ -1,0 +1,15 @@
+.footer{
+    background-color: rgb(234, 234, 234);
+    color: white;
+    padding: 50px 250px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    height: 300px
+}
+
+.ft{
+    width: 25%;
+    font-size: large;
+    color: rgb(131, 130, 130);
+}

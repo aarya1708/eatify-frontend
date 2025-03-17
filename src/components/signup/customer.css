@@ -1,0 +1,28 @@
+.signup-parent{
+    width: 100%;
+    height: 100vh;
+    background-image:linear-gradient(rgb(248, 134, 236), rgb(255, 120, 120), rgb(255, 174, 174));
+    justify-items: center;
+    align-content: center;
+}
+
+.signup-detail-box{
+    width: 70%;
+    height: 90%;
+    padding: 0 25px;
+    align-content: center;
+    justify-items: center;
+    background-color: rgb(249, 240, 249);
+    border-radius: 20px;
+    box-shadow: 1px 1px 9px grey;
+}
+
+.signup-submit-btn{
+    padding: 12px 8px;
+    border-radius: 25px;
+    border-width: 0px;
+    border-color: grey;
+    width: 160px;
+    font-size: 15px;
+    background-image: linear-gradient(rgb(248, 134, 236), rgb(255, 174, 174));
+}

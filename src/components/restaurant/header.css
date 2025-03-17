@@ -1,0 +1,44 @@
+*{
+    font-family: "Exo 2", serif;
+    font-optical-sizing: auto;
+}
+
+.hr{
+    height: 1px;
+    background-color: rgb(0, 0, 0);
+    border: 0;
+    margin: 0 60px;
+}
+
+.header{
+    display: flex; 
+    align-items: center; /* Vertically centers items */
+    justify-content: space-between; /* Ensures proper spacing between h1 and links */
+    padding: 5px 50px; /* Optional padding for better spacing */
+    height: 100px;
+    background-color: rgb(229, 229, 229);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3); 
+    background-color: rgb(249, 240, 249);
+}
+  
+.header-links {
+    display: flex; 
+    align-items: center; 
+    gap: 8px; 
+}
+  
+.header img {
+    vertical-align: middle; 
+}
+
+.header-links a{
+    font-size: large;
+}
+
+.header h1{
+    margin-left: 30px;
+}
+
+#scrl-btn{
+    cursor: pointer;
+}

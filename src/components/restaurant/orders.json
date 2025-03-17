@@ -1,0 +1,35 @@
+[
+    {
+      "id": 1,
+      "items": "Greek salad x 2, Veg salad x 1, Clover Salad x 2, Chicken Salad x 4, Lasagna Rolls x 2, Peri Peri Rolls x 2",
+      "totalItems": 6,
+      "price": 224,
+      "restaurent":"Banna",
+      "restaurent-address": "great stack, street, City, state, US, 123456",
+      "restuarent-contact": "1111111111",
+      "customer": "aarya",
+      "customer-address": "DAIICT",
+      "customer-contact": "9876543210",
+      "status": "Ordered",
+      "delivery-partner-name": "",
+      "delivery-partner-id":"",
+      "delivery-partner-earn": 56,
+      "restaurent-earn": 128
+    },
+    {
+      "id": 2,
+      "items": "Greek salad x 3, Veg salad x 2",
+      "totalItems": 2,
+      "price": 74,
+      "restaurent":"Banna",
+     "restaurent-address": "great stack, street, City, state, US, 123456",
+      "restuarent-contact": "1111111111",
+      "customer":"vraj",
+      "customer-address": "DAIICT",
+      "customer-contact": "9876543210",
+      "status": "Ordered",
+      "delivery-partner-earn": 18,
+      "restaurent-earn": 30
+    }
+  ]
+  
