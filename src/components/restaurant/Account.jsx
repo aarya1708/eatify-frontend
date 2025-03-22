@@ -45,11 +45,11 @@ export default function Account() {
     const fetchRestaurant = async () => {
       try {
         const restaurantName = localStorage.getItem("name");
-        const response = await axios.post("http://localhost:9000/rest-acc", { name: restaurantName });
+        const response = await axios.post("http://localhost:3000/rest-acc", { name: restaurantName });
     
         setRestaurant(response.data);
       
-        const response2 = await axios.post("http://localhost:9000/rest-earnings", { email: response.data.email });
+        const response2 = await axios.post("http://localhost:3000/rest-earnings", { email: response.data.email });
         if (response2.data.previousOrders && Array.isArray(response2.data.previousOrders)) {
           const earnings = response2.data.previousOrders.reduce(
             (sum, order) => sum + (order.totalPrice || 0), 

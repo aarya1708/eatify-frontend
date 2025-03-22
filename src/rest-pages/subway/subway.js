@@ -13,7 +13,7 @@ function Subway() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        axios.post("http://localhost:9000/Subway", {action:'user', email: "subway@gmail.com" }) 
+        axios.post("http://localhost:3000/Subway", {action:'user', email: "subway@gmail.com" }) 
             .then((response) => {
                 console.log('Rest details received:', response.data);
                 setRestData(response.data);

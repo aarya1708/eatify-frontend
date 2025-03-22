@@ -13,7 +13,7 @@ function Temptations() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        axios.post("http://localhost:9000/Temptations", { action:'user', email: "temptations@gmail.com" }) 
+        axios.post("http://localhost:3000/Temptations", { action:'user', email: "temptations@gmail.com" }) 
             .then((response) => {
                 console.log('Rest details received:', response.data);
                 setRestData(response.data);

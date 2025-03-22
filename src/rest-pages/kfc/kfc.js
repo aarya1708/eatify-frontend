@@ -13,7 +13,7 @@ function Kfc() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        axios.post("http://localhost:9000/KFC", { action:'user', email: "kfc@gmail.com" })  
+        axios.post("http://localhost:3000/KFC", { action:'user', email: "kfc@gmail.com" })  
             .then((response) => {
                 console.log('Rest details received:', response.data);
                 setRestData(response.data);

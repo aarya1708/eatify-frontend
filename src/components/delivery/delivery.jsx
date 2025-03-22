@@ -86,13 +86,13 @@ export default function Deliver() {
     const fetchOrders = async () => {
       try {
         // Fetch current orders
-        const response = await axios.get("http://localhost:9000/delivery");
+        const response = await axios.get("http://localhost:3000/delivery");
         console.log("Delivery Response:", response.data);
         if (isMounted) setOrders(response.data);
 
         // Post request to update delivery status
         const deliveryPartner = localStorage.getItem("name");
-        const response2 = await axios.post("http://localhost:9000/delivery", {
+        const response2 = await axios.post("http://localhost:3000/delivery", {
           action: "2",
           deliveryPartner,
         });
@@ -103,7 +103,7 @@ export default function Deliver() {
           setAcceptedOrder(response2.data);
         }
 
-        const response4 = await axios.post("http://localhost:9000/delivery", {
+        const response4 = await axios.post("http://localhost:3000/delivery", {
           action: "4",
           email: decodedToken.email,
         });
@@ -154,19 +154,19 @@ export default function Deliver() {
     const orderToAccept = orders.find((order) => order.id === orderId);
     if (orderToAccept) {
 
-      await axios.patch("http://localhost:9000/delivery", {
+      await axios.patch("http://localhost:3000/delivery", {
         id: orderId,
         name: localStorage.getItem('name'),
         email: jwtDecode(userToken).email
       });
 
-      await axios.post("http://localhost:9000/delivery", {
+      await axios.post("http://localhost:3000/delivery", {
         action: "1",
         order: { ...orderToAccept, deliveryPartner: localStorage.getItem('name') }
       });
       startLoading();
       try {
-        const response = await axios.delete(`http://localhost:9000/delivery`, {
+        const response = await axios.delete(`http://localhost:3000/delivery`, {
           data: { id: orderToAccept.id, action: "1" }
         });
 
@@ -183,7 +183,7 @@ export default function Deliver() {
         stopLoading();
       }
 
-      const response2 = await axios.post("http://localhost:9000/delivery", {
+      const response2 = await axios.post("http://localhost:3000/delivery", {
         action: "2",
         deliveryPartner: localStorage.getItem('name')
       });
@@ -206,7 +206,7 @@ export default function Deliver() {
     try {
       console.log(acceptedOrder);
       setLoading(true);
-      const callBack = await axios.post("http://localhost:9000/send-otp", {
+      const callBack = await axios.post("http://localhost:3000/send-otp", {
         email: acceptedOrder.customerEmail, // Make sure customerEmail is available
         orderId: acceptedOrder.id,
       });
@@ -238,7 +238,7 @@ export default function Deliver() {
       console.log("Sending orderId:", acceptedOrder.id);
       console.log("Sending otp:", otp);
 
-      const response = await axios.post("http://localhost:9000/verify-otp", {
+      const response = await axios.post("http://localhost:3000/verify-otp", {
         orderId: acceptedOrder.id,
         otp: otp,
       });
@@ -261,7 +261,7 @@ export default function Deliver() {
         setOrders((orders) => orders.filter((order) => order.id !== orderId));
 
         setPreviousOrders((prev) => [updatedOrder, ...prev]);
-        const response3 = await axios.post("http://localhost:9000/delivery", {
+        const response3 = await axios.post("http://localhost:3000/delivery", {
           action: "3",
           deliveryEmail: decodedToken.email,
           order: updatedOrder,
@@ -277,7 +277,7 @@ export default function Deliver() {
             autoClose: 3000
           });
 
-          const response2 = await axios.delete(`http://localhost:9000/delivery`, {
+          const response2 = await axios.delete(`http://localhost:3000/delivery`, {
             data: { id: acceptedOrder.id, action: "2" }
           });
 

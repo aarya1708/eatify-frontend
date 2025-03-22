@@ -39,7 +39,7 @@ function App() {
         setEmail(decodedToken.email || 'No email found'); // Set email if available
 
         // Make an API call to check authentication
-        axios.get('http://localhost:9000/', { withCredentials: true })
+        axios.get('http://localhost:3000/', { withCredentials: true })
           .then((response) => {
             stopLoading();
             console.log("User authenticated:", response.data);

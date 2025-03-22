@@ -56,7 +56,7 @@ function Cart() {
 
     if (paymentMethod === "COD") {
       try {
-        await axios.post('http://localhost:9000/cart', orderPayload, {
+        await axios.post('http://localhost:3000/cart', orderPayload, {
           headers: { 'Content-Type': 'application/json' },
         });
 
@@ -71,7 +71,7 @@ function Cart() {
     } else {
       try {
         const orderResponse = await axios.post(
-          'http://localhost:9000/create-order',
+          'http://localhost:3000/create-order',
           { amount: finalTotal * 100 } // Razorpay accepts amount in paise
         );
 
@@ -84,12 +84,12 @@ function Cart() {
           order_id: orderResponse.data.id,
           handler: async function (response) {
             const verifyResponse = await axios.post(
-              'http://localhost:9000/verify-payment',
+              'http://localhost:3000/verify-payment',
               response
             );
 
             if (verifyResponse.data.success) {
-              await axios.post('http://localhost:9000/cart', orderPayload, {
+              await axios.post('http://localhost:3000/cart', orderPayload, {
                 headers: { 'Content-Type': 'application/json' },
               });
 
@@ -137,7 +137,7 @@ function Cart() {
 
     const fetchRestaurantDetails = async () => {
       try {
-        const response = await axios.get('http://localhost:9000/cart', {
+        const response = await axios.get('http://localhost:3000/cart', {
           params: { name: restaurantName },
         });
         setRestaurant(response.data);

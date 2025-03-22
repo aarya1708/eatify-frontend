@@ -18,7 +18,7 @@ const Customer = () => {
         e.preventDefault();
         console.log(customerSignup);
         try {
-            await axios.post('http://localhost:9000/signup-as-customer', {
+            await axios.post('http://localhost:3000/signup-as-customer', {
                 name: customerSignup.name,
                 email: customerSignup.email,
                 phone: Number(customerSignup.phone),

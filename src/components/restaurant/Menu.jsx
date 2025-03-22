@@ -63,7 +63,7 @@ export default function Menu() {
       }
 
       axios
-        .post("http://localhost:9000/McDonald's", { action: 'user', email: restEmail })
+        .post("http://localhost:3000/McDonald's", { action: 'user', email: restEmail })
         .then((response) => {
           setRestData(response.data);
           setMenu(response.data.menu);
@@ -133,7 +133,7 @@ export default function Menu() {
 
         if (isEditing) {
           const response = await axios.patch(
-            `http://localhost:9000/${restaurantName}`,
+            `http://localhost:3000/${restaurantName}`,
             {
               oldDishName: editingDishName,
               name: newDish.name,
@@ -159,7 +159,7 @@ export default function Menu() {
           }
         } else {
           const response = await axios.post(
-            `http://localhost:9000/${restaurantName}`,
+            `http://localhost:3000/${restaurantName}`,
             {
               action: 'adddish',
               name: newDish.name,
@@ -225,7 +225,7 @@ export default function Menu() {
   const handleDeleteDish = async () => {
     startLoading();
     try {
-      const response = await axios.delete(`http://localhost:9000/${restaurantName}`, {
+      const response = await axios.delete(`http://localhost:3000/${restaurantName}`, {
         data: { name: editingDishName },
       });
 

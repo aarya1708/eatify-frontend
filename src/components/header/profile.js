@@ -39,7 +39,7 @@ function Profile() {
       }
 
       axios
-        .post("http://localhost:9000/profile", { email: userEmail })
+        .post("http://localhost:3000/profile", { email: userEmail })
         .then((response) => {
           console.log('User details received:', response.data);
           setUserData(response.data);

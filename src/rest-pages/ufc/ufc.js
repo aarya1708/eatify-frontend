@@ -13,7 +13,7 @@ function Ufc() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        axios.post("http://localhost:9000/United%20Farmers%20Creamery", {action:'user', email: "ufc@gmail.com" })  
+        axios.post("http://localhost:3000/United%20Farmers%20Creamery", {action:'user', email: "ufc@gmail.com" })  
             .then((response) => {
                 console.log('Rest details received:', response.data);
                 setRestData(response.data);
