@@ -31,7 +31,7 @@ function Login() {
     const handleLoginSubmit = async (e) => {
         e.preventDefault();
         try {
-            const response = await axios.post('https://eatify-backend.vercel.app/login', {
+            const response = await axios.post('https://eatify-backend.vercel.applogin', {
                 email: loginForm.email,
                 password: loginForm.password
             },{ withCredentials: true });

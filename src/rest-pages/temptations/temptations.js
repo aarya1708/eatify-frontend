@@ -13,7 +13,7 @@ function Temptations() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        axios.post("https://eatify-backend.vercel.app//Temptations", { action:'user', email: "temptations@gmail.com" }) 
+        axios.post("https://eatify-backend.vercel.app/Temptations", { action:'user', email: "temptations@gmail.com" }) 
             .then((response) => {
                 console.log('Rest details received:', response.data);
                 setRestData(response.data);

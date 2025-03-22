@@ -86,13 +86,13 @@ export default function Deliver() {
     const fetchOrders = async () => {
       try {
         // Fetch current orders
-        const response = await axios.get("https://eatify-backend.vercel.app//delivery");
+        const response = await axios.get("https://eatify-backend.vercel.app/delivery");
         console.log("Delivery Response:", response.data);
         if (isMounted) setOrders(response.data);
 
         // Post request to update delivery status
         const deliveryPartner = localStorage.getItem("name");
-        const response2 = await axios.post("https://eatify-backend.vercel.app//delivery", {
+        const response2 = await axios.post("https://eatify-backend.vercel.app/delivery", {
           action: "2",
           deliveryPartner,
         });
@@ -103,7 +103,7 @@ export default function Deliver() {
           setAcceptedOrder(response2.data);
         }
 
-        const response4 = await axios.post("https://eatify-backend.vercel.app//delivery", {
+        const response4 = await axios.post("https://eatify-backend.vercel.app/delivery", {
           action: "4",
           email: decodedToken.email,
         });
@@ -154,19 +154,19 @@ export default function Deliver() {
     const orderToAccept = orders.find((order) => order.id === orderId);
     if (orderToAccept) {
 
-      await axios.patch("https://eatify-backend.vercel.app//delivery", {
+      await axios.patch("https://eatify-backend.vercel.app/delivery", {
         id: orderId,
         name: localStorage.getItem('name'),
         email: jwtDecode(userToken).email
       });
 
-      await axios.post("https://eatify-backend.vercel.app//delivery", {
+      await axios.post("https://eatify-backend.vercel.app/delivery", {
         action: "1",
         order: { ...orderToAccept, deliveryPartner: localStorage.getItem('name') }
       });
       startLoading();
       try {
-        const response = await axios.delete(`https://eatify-backend.vercel.app//delivery`, {
+        const response = await axios.delete(`https://eatify-backend.vercel.app/delivery`, {
           data: { id: orderToAccept.id, action: "1" }
         });
 
@@ -183,7 +183,7 @@ export default function Deliver() {
         stopLoading();
       }
 
-      const response2 = await axios.post("https://eatify-backend.vercel.app//delivery", {
+      const response2 = await axios.post("https://eatify-backend.vercel.app/delivery", {
         action: "2",
         deliveryPartner: localStorage.getItem('name')
       });
@@ -206,7 +206,7 @@ export default function Deliver() {
     try {
       console.log(acceptedOrder);
       setLoading(true);
-      const callBack = await axios.post("https://eatify-backend.vercel.app//send-otp", {
+      const callBack = await axios.post("https://eatify-backend.vercel.app/send-otp", {
         email: acceptedOrder.customerEmail, // Make sure customerEmail is available
         orderId: acceptedOrder.id,
       });
@@ -238,7 +238,7 @@ export default function Deliver() {
       console.log("Sending orderId:", acceptedOrder.id);
       console.log("Sending otp:", otp);
 
-      const response = await axios.post("https://eatify-backend.vercel.app//verify-otp", {
+      const response = await axios.post("https://eatify-backend.vercel.app/verify-otp", {
         orderId: acceptedOrder.id,
         otp: otp,
       });
@@ -261,7 +261,7 @@ export default function Deliver() {
         setOrders((orders) => orders.filter((order) => order.id !== orderId));
 
         setPreviousOrders((prev) => [updatedOrder, ...prev]);
-        const response3 = await axios.post("https://eatify-backend.vercel.app//delivery", {
+        const response3 = await axios.post("https://eatify-backend.vercel.app/delivery", {
           action: "3",
           deliveryEmail: decodedToken.email,
           order: updatedOrder,
@@ -277,7 +277,7 @@ export default function Deliver() {
             autoClose: 3000
           });
 
-          const response2 = await axios.delete(`https://eatify-backend.vercel.app//delivery`, {
+          const response2 = await axios.delete(`https://eatify-backend.vercel.app/delivery`, {
             data: { id: acceptedOrder.id, action: "2" }
           });
 

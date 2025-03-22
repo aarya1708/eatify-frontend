@@ -39,7 +39,7 @@ function Profile() {
       }
 
       axios
-        .post("https://eatify-backend.vercel.app//profile", { email: userEmail })
+        .post("https://eatify-backend.vercel.app/profile", { email: userEmail })
         .then((response) => {
           console.log('User details received:', response.data);
           setUserData(response.data);

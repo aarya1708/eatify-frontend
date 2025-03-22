@@ -18,7 +18,7 @@ function Restaurant({ anyToggle = {}, setAnyToggle }) {
   useEffect(() => {
     console.log("Cookies: ", document.cookie);
     axios
-      .get("https://eatify-backend.vercel.app//", { withCredentials: true })  // ✅ Required for auth
+      .get("https://eatify-backend.vercel.app/", { withCredentials: true })  // ✅ Required for auth
       .then((response) => {
         console.log("API Response:", response.data);
 

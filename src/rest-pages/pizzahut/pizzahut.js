@@ -13,7 +13,7 @@ function Pizzahut() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        axios.post("https://eatify-backend.vercel.app//Pizza%20Hut", { action:'user', email: "pizzahut@gmail.com" })  
+        axios.post("https://eatify-backend.vercel.app/Pizza%20Hut", { action:'user', email: "pizzahut@gmail.com" })  
             .then((response) => {
                 console.log('Rest details received:', response.data);
                 setRestData(response.data);
