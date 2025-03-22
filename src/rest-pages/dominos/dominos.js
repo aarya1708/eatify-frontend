@@ -13,7 +13,7 @@ function Dominos() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        axios.post("https://eatify-frontend.vercel.app//Domino's%20Pizza", {action:'user', email: "dominos@gmail.com" }) 
+        axios.post("https://eatify-backend.vercel.app//Domino's%20Pizza", {action:'user', email: "dominos@gmail.com" }) 
             .then((response) => {
                 console.log('Rest details received:', response.data);
                 setRestData(response.data);

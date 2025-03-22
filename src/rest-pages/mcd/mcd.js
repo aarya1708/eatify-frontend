@@ -13,7 +13,7 @@ function Mcd() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        axios.post("https://eatify-frontend.vercel.app//McDonald's", {action:'user', email: "mcd@gmail.com" })  
+        axios.post("https://eatify-backend.vercel.app//McDonald's", {action:'user', email: "mcd@gmail.com" })  
             .then((response) => {
                 console.log('Rest details received:', response.data);
                 setRestData(response.data);

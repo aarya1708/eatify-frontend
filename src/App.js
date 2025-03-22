@@ -39,7 +39,7 @@ function App() {
         setEmail(decodedToken.email || 'No email found'); // Set email if available
 
         // Make an API call to check authentication
-        axios.get('https://eatify-frontend.vercel.app//', { withCredentials: true })
+        axios.get('https://eatify-backend.vercel.app//', { withCredentials: true })
           .then((response) => {
             stopLoading();
             console.log("User authenticated:", response.data);

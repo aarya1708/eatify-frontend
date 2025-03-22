@@ -18,7 +18,7 @@ const Customer = () => {
         e.preventDefault();
         console.log(customerSignup);
         try {
-            await axios.post('https://eatify-frontend.vercel.app//signup-as-customer', {
+            await axios.post('https://eatify-backend.vercel.app//signup-as-customer', {
                 name: customerSignup.name,
                 email: customerSignup.email,
                 phone: Number(customerSignup.phone),

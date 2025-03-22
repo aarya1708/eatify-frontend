@@ -63,7 +63,7 @@ export default function Menu() {
       }
 
       axios
-        .post("https://eatify-frontend.vercel.app//McDonald's", { action: 'user', email: restEmail })
+        .post("https://eatify-backend.vercel.app//McDonald's", { action: 'user', email: restEmail })
         .then((response) => {
           setRestData(response.data);
           setMenu(response.data.menu);
@@ -133,7 +133,7 @@ export default function Menu() {
 
         if (isEditing) {
           const response = await axios.patch(
-            `https://eatify-frontend.vercel.app//${restaurantName}`,
+            `https://eatify-backend.vercel.app//${restaurantName}`,
             {
               oldDishName: editingDishName,
               name: newDish.name,
@@ -159,7 +159,7 @@ export default function Menu() {
           }
         } else {
           const response = await axios.post(
-            `https://eatify-frontend.vercel.app//${restaurantName}`,
+            `https://eatify-backend.vercel.app//${restaurantName}`,
             {
               action: 'adddish',
               name: newDish.name,
@@ -225,7 +225,7 @@ export default function Menu() {
   const handleDeleteDish = async () => {
     startLoading();
     try {
-      const response = await axios.delete(`https://eatify-frontend.vercel.app//${restaurantName}`, {
+      const response = await axios.delete(`https://eatify-backend.vercel.app//${restaurantName}`, {
         data: { name: editingDishName },
       });
 

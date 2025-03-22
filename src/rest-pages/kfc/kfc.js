@@ -13,7 +13,7 @@ function Kfc() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        axios.post("https://eatify-frontend.vercel.app//KFC", { action:'user', email: "kfc@gmail.com" })  
+        axios.post("https://eatify-backend.vercel.app//KFC", { action:'user', email: "kfc@gmail.com" })  
             .then((response) => {
                 console.log('Rest details received:', response.data);
                 setRestData(response.data);

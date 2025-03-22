@@ -13,7 +13,7 @@ function Subway() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        axios.post("https://eatify-frontend.vercel.app//Subway", {action:'user', email: "subway@gmail.com" }) 
+        axios.post("https://eatify-backend.vercel.app//Subway", {action:'user', email: "subway@gmail.com" }) 
             .then((response) => {
                 console.log('Rest details received:', response.data);
                 setRestData(response.data);
