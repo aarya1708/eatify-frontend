@@ -39,7 +39,7 @@ function Profile() {
       }
 
       axios
-        .post("http://localhost:3000/profile", { email: userEmail })
+        .post("https://eatify-frontend.vercel.app//profile", { email: userEmail })
         .then((response) => {
           console.log('User details received:', response.data);
           setUserData(response.data);

@@ -13,7 +13,7 @@ function Kdh() {
     useEffect(() => {
         window.scrollTo(0, 0);
 
-        axios.post("http://localhost:3000/Kakke%20Di%20Hatti", {action:'user', email: "kakkedihatti@gmail.com" })  
+        axios.post("https://eatify-frontend.vercel.app//Kakke%20Di%20Hatti", {action:'user', email: "kakkedihatti@gmail.com" })  
             .then((response) => {
                 console.log('Rest details received:', response.data);
                 setRestData(response.data);

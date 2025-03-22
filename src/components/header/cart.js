@@ -56,7 +56,7 @@ function Cart() {
 
     if (paymentMethod === "COD") {
       try {
-        await axios.post('http://localhost:3000/cart', orderPayload, {
+        await axios.post('https://eatify-frontend.vercel.app//cart', orderPayload, {
           headers: { 'Content-Type': 'application/json' },
         });
 
@@ -71,7 +71,7 @@ function Cart() {
     } else {
       try {
         const orderResponse = await axios.post(
-          'http://localhost:3000/create-order',
+          'https://eatify-frontend.vercel.app//create-order',
           { amount: finalTotal * 100 } // Razorpay accepts amount in paise
         );
 
@@ -84,12 +84,12 @@ function Cart() {
           order_id: orderResponse.data.id,
           handler: async function (response) {
             const verifyResponse = await axios.post(
-              'http://localhost:3000/verify-payment',
+              'https://eatify-frontend.vercel.app//verify-payment',
               response
             );
 
             if (verifyResponse.data.success) {
-              await axios.post('http://localhost:3000/cart', orderPayload, {
+              await axios.post('https://eatify-frontend.vercel.app//cart', orderPayload, {
                 headers: { 'Content-Type': 'application/json' },
               });
 
@@ -137,7 +137,7 @@ function Cart() {
 
     const fetchRestaurantDetails = async () => {
       try {
-        const response = await axios.get('http://localhost:3000/cart', {
+        const response = await axios.get('https://eatify-frontend.vercel.app//cart', {
           params: { name: restaurantName },
         });
         setRestaurant(response.data);

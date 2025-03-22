@@ -18,7 +18,7 @@ const Delivery = () => {
         e.preventDefault();
         console.log(customerSignup);
         try {
-            await axios.post('http://localhost:3000/signup-as-delivery', {
+            await axios.post('https://eatify-frontend.vercel.app//signup-as-delivery', {
                 name: customerSignup.name,
                 email: customerSignup.email,
                 phone: Number(customerSignup.phone),

@@ -57,7 +57,7 @@ export default function Order() {
     }
     const fetchOrders = async () => {
       try {
-        const response = await axios.post("http://localhost:3000/rest-order", {
+        const response = await axios.post("https://eatify-frontend.vercel.app//rest-order", {
           action: "restaurant",
           restaurantName: restaurantName,
         });
@@ -85,7 +85,7 @@ export default function Order() {
 
   const updateOrderStatus = async (id) => {
     try {
-      const response = await axios.patch("http://localhost:3000/rest-order", {
+      const response = await axios.patch("https://eatify-frontend.vercel.app//rest-order", {
         restaurantName: restaurantName,
         id: id,
       });
@@ -102,7 +102,7 @@ export default function Order() {
 
         setCurrentOrders(updatedOrders);
 
-        axios.post("http://localhost:3000/rest-order", {
+        axios.post("https://eatify-frontend.vercel.app//rest-order", {
           action: "delivery",
           order: deliveryOrder
         })
@@ -131,11 +131,11 @@ export default function Order() {
     await setprevOrder(orderToMove);
     console.log(orderToMove);
     try {
-      const response = await axios.delete(`http://localhost:3000/rest-order`, {
+      const response = await axios.delete(`https://eatify-frontend.vercel.app//rest-order`, {
         data: { restaurantName: restaurantName, id: orderToMove.id },
       });
 
-      const response2 = await axios.post("http://localhost:3000/rest-order", {
+      const response2 = await axios.post("https://eatify-frontend.vercel.app//rest-order", {
         action: "prevOrder",
         order: orderToMove
       });

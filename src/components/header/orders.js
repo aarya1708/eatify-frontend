@@ -34,10 +34,10 @@ const PreviousOrders = () => {
     const decodedToken = jwtDecode(userToken);
     const fetchOrders = async () => {
       try {
-        const response = await axios.post('http://localhost:3000/user-prev-order', { email: decodedToken.email });
+        const response = await axios.post('https://eatify-frontend.vercel.app//user-prev-order', { email: decodedToken.email });
         let fetchedPreviousOrders = response.data.previousOrders;
 
-        const response2 = await axios.post('http://localhost:3000/user-curr-order', { email: decodedToken.email });
+        const response2 = await axios.post('https://eatify-frontend.vercel.app//user-curr-order', { email: decodedToken.email });
         let fetchedCurrentOrders = response2.data;
 
         fetchedPreviousOrders.sort((a, b) => b.id - a.id);
