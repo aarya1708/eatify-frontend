@@ -248,16 +248,12 @@ export default function Deliver() {
       if (response.status == 200) {
         setOtpSent(false);
         setOtp(null);
-        console.log("hi")
-        // Create a new object with updated status
-        console.log("hii")
 
         const updatedOrder = {
           ...acceptedOrder,
           status: "Delivered",
           deliveryTime: new Date().toLocaleTimeString(),
         };
-        // Update orders state (remove from active orders)
         setOrders((orders) => orders.filter((order) => order.id !== orderId));
 
         setPreviousOrders((prev) => [updatedOrder, ...prev]);
@@ -271,7 +267,6 @@ export default function Deliver() {
         if (response3.status == 200) {
 
           setAcceptedOrder(null);
-          // Show success notification
           toast.success("Order delivered successfully! Earnings added to your account.", {
             position: "top-right",
             autoClose: 3000
