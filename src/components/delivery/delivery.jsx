@@ -287,8 +287,8 @@ export default function Deliver() {
         }
       }
     } catch (error) {
-      console.error("Error verifying OTP:", error);
-      toast.error("Invalid OTP. Please try again");
+      console.error("Error verifying OTP:", error.response?.data || error.message);
+        toast.error(error.response?.data?.message);
     } finally {
       setLoading(false);
     }
