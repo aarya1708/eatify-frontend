@@ -286,6 +286,11 @@ export default function Deliver() {
           }
         }
       }
+
+      if(response.status == 400)
+      {
+        console.log("status coming 400");
+      }
     } catch (error) {
       console.error("Error verifying OTP:", error.response?.data || error.message);
         toast.error(error.response?.data?.message);
