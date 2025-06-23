@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# 🍽️ Eatify – Fullstack Food Delivery App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Eatify is a robust, fullstack food delivery platform inspired by leading services like Swiggy and Zomato. Built using the MERN stack (MongoDB, Express.js, React.js, Node.js), Eatify enables seamless interaction between three distinct user roles — Customers, Restaurants, and Delivery Partners — each with their own dedicated dashboard and functionalities. Customers can browse restaurants, place orders, track deliveries in real-time, and make secure payments online or via cash on delivery. Restaurants have powerful tools to manage menus, accept orders, and view earnings, while delivery partners can manage and track assigned deliveries with OTP-based verification. Eatify also features JWT-based authentication, email notifications, and payment gateway integration using Razorpay, offering a real-world, end-to-end experience of how modern food delivery apps operate behind the scenes.
 
-## Available Scripts
+## 🔗 Live Demo
+You can check out Eatify live here:
+👉 https://eatify-frontend.vercel.app
 
-In the project directory, you can run:
+## 🚀 Features
 
-### `npm start`
+👤 Customer
+ - User authentication (Sign Up / Login)
+ - Browse restaurants and menu items
+ - Add items to cart and place orders
+ - Online payment via Razorpay (Test Mode)
+ - Cash on Delivery (COD) support
+ - View order history and live order tracking
+ - Access profile information (total spend, personal details)
+ - View active offers
+ - Search for restaurants
+ - Logout securely
 
-Runs the app in the development mode.\
-Open [https://eatify-backend.vercel.app](https://eatify-backend.vercel.app) to view it in your browser.
+🍽️ Restaurant
+ - Add / update / delete menu items
+ - Create and manage menu categories
+ - Accept or reject incoming orders
+ - View order details with real-time delivery status
+ - View past orders
+ - Search orders by ID or date
+ - View profile and total earnings
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+🛵 Delivery Partner
+ - View and accept delivery requests
+ - Access order details, restaurant information, and customer address
+ - See payment mode (Online or COD)
+ - View past deliveries
+ - View earnings
 
-### `npm test`
+## 🧑‍💻 Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+ - Frontend: React.js, Axios, Tailwind CSS
+ - Backend: Node.js, Express.js
+ - Database: MongoDB
+ - Authentication: JWT Tokens
+ - Payment Gateway: Razorpay (Test Mode)
+ - Email Service: Nodemailer (for OTP verification)
+ - State Management: React State / Context API
+ - Deployment: Vercel (Frontend) + Vercel (Backend)
 
-### `npm run build`
+## 🔧 Core Integrations
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+ - 🔐 Token-based authentication
+ - 🔄 Real-time order tracking
+ - 🛂 Multi-role login system
+ - 📧 OTP-based delivery verification via email (Nodemailer)
+ - 💳 Online payment using Razorpay (Test Mode)
+ - 🌐 MongoDB for scalable data management
+ - 📦 RESTful API with proper error handling
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🧩 System Modules
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+ - Customer Interface
+ - Restaurant Admin Panel
+ - Delivery Partner Dashboard
 
-### `npm run eject`
+Each module is independently authenticated and has tailored functionality as described in the features section.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📈 Future Enhancements
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+ - AI-based restaurant recommendation system
+ - Integration of maps for route optimization
+ - Delivery partner location tracking via GPS
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## ⚠️ Disclaimer
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is built purely for educational and demonstration purposes.
+It is not affiliated with or endorsed by any real brands or restaurants, including but not limited to 'Subway', 'Pizza Hut' or others used in this demo.
+All logos, names, and references are used only for showcasing features and do not represent actual partnerships.
+Eatify is not intended for real-world production use.
