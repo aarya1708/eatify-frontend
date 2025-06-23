@@ -77,9 +77,3 @@ This project is built purely for educational and demonstration purposes.
 It is not affiliated with or endorsed by any real brands or restaurants, including but not limited to 'Subway', 'Pizza Hut' or others used in this demo.
 All logos, names, and references are used only for showcasing features and do not represent actual partnerships.
 Eatify is not intended for real-world production use.
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
