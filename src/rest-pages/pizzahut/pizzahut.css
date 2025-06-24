@@ -114,3 +114,48 @@
     transform: scale(0.95);
 }
 
+.top3img {
+    width: 300px;             /* Smaller default width */
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+
+/* Make the images responsive on narrower screens */
+@media (max-width: 1550px) {
+    .top3img {
+        width: 290px;         /* Even smaller on <=1280px */
+    }
+}
+@media (max-width: 1500px) {
+    .top3img {
+        width: 280px;         /* Even smaller on <=1280px */
+    }
+}
+@media (max-width: 1450px) {
+    .top3img {
+        width: 270px;         /* Even smaller on <=1280px */
+    }
+}
+@media (max-width: 1400px) {
+    .top3img {
+        width: 260px;         /* Even smaller on <=1280px */
+    }
+}
+@media (max-width: 1350px) {
+    .top3img {
+        width: 250px;         /* Even smaller on <=1280px */
+    }
+}
+@media (max-width: 1300px) {
+    .top3img {
+        width: 240px;         /* Even smaller on <=1280px */
+    }
+}
+@media (max-width: 1250px) {
+    .top3img {
+        width: 230px;         /* Even smaller on <=1280px */
+    }
+}
