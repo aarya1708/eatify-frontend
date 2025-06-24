@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import Header from '../../components/header/header2.js';
 import '../pizzahut/pizzahut.css';
 import { Menuitem } from '../menu_card.js';
