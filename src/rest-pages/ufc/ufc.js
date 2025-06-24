@@ -46,8 +46,8 @@ function Ufc() {
                     <h2>Top 3 Picks</h2>
                     <div className="top3imagebox">
                         <img className='top3img' src={require('./1.avif')} />
-                        <img className='top3img' src={require('./1.avif')} />
-                        <img className='top3img' src={require('./1.avif')} />
+                        <img className='top3img' src={require('./2.avif')} />
+                        <img className='top3img' src={require('./3.avif')} />
                     </div>
                 </div>
                 <br />
