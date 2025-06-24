@@ -31,8 +31,8 @@ function Food({ anyToggle, setAnyToggle }) {
             className="zoom"
             onClick={() => toggleCategory('pizzaToggle')}
             src={require('./pizza.avif')}
-            width={200}
-            height={250}
+            width={100}
+            height={150}
             alt="Pizza"
           />
           <img
