@@ -39,40 +39,40 @@ function Food({ anyToggle, setAnyToggle }) {
             className="zoom"
             onClick={() => toggleCategory('pastaToggle')}
             src={require('./pasta.avif')}
-            width={200}
-            height={250}
+            width={180}
+            height={225}
             alt="Pasta"
           />
           <img
             className="zoom"
             onClick={() => toggleCategory('burgerToggle')}
             src={require('./burger.avif')}
-            width={200}
-            height={250}
+            width={180}
+            height={225}
             alt="Burger"
           />
           <img
             className="zoom"
             onClick={() => toggleCategory('rollsToggle')}
             src={require('./rolls.avif')}
-            width={200}
-            height={250}
+            width={180}
+            height={225}
             alt="Rolls"
           />
           <img
             className="zoom"
             onClick={() => toggleCategory('shakeToggle')}
             src={require('./shake.avif')}
-            width={200}
-            height={250}
+            width={180}
+            height={225}
             alt="Shake"
           />
           <img
             className="zoom"
             onClick={() => toggleCategory('chineseToggle')}
             src={require('./chinese.avif')}
-            width={200}
-            height={250}
+            width={180}
+            height={225}
             alt="Chinese"
           />
         </div>
