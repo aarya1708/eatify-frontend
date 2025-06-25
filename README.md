@@ -38,7 +38,7 @@ You can check out Eatify live here:
 
 ## 🧑‍💻 Tech Stack
 
- - Frontend: React.js, Axios, Tailwind CSS
+ - Frontend: React.js, Axios, Bootstrap CSS
  - Backend: Node.js, Express.js
  - Database: MongoDB
  - Authentication: JWT Tokens
