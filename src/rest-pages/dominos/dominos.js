@@ -15,7 +15,7 @@ function Dominos() {
 
         axios.post("https://eatify-backend.vercel.app/Domino's%20Pizza", {action:'user', email: "dominos@gmail.com" }) 
             .then((response) => {
-                console.log('Rest details received:', response.data);
+                // console.log('Rest details received:', response.data);
                 setRestData(response.data);
                 setMenu(response.data.menu);
             })

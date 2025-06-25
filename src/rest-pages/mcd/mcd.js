@@ -15,7 +15,7 @@ function Mcd() {
 
         axios.post("https://eatify-backend.vercel.app/McDonald's", {action:'user', email: "mcd@gmail.com" })  
             .then((response) => {
-                console.log('Rest details received:', response.data);
+                // console.log('Rest details received:', response.data);
                 setRestData(response.data);
                 setMenu(response.data.menu);
             })

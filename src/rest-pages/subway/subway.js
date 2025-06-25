@@ -15,7 +15,7 @@ function Subway() {
 
         axios.post("https://eatify-backend.vercel.app/Subway", {action:'user', email: "subway@gmail.com" }) 
             .then((response) => {
-                console.log('Rest details received:', response.data);
+                // console.log('Rest details received:', response.data);
                 setRestData(response.data);
                 setMenu(response.data.menu);
             })

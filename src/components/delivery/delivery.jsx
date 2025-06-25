@@ -87,7 +87,7 @@ export default function Deliver() {
       try {
         // Fetch current orders
         const response = await axios.get("https://eatify-backend.vercel.app/delivery");
-        console.log("Delivery Response:", response.data);
+        // console.log("Delivery Response:", response.data);
         if (isMounted) setOrders(response.data);
 
         // Post request to update delivery status
@@ -97,9 +97,9 @@ export default function Deliver() {
           deliveryPartner,
         });
 
-        console.log(response2);
+        // console.log(response2);
         if (response2.status === 200 && isMounted) {
-          console.log(response2.data);
+          // console.log(response2.data);
           setAcceptedOrder(response2.data);
         }
 
@@ -193,7 +193,7 @@ export default function Deliver() {
       }
 
       // setAcceptedOrder(orderToAccept);
-      console.log(orderToAccept);
+      // console.log(orderToAccept);
       toast.success(`Order from ${orderToAccept.restName} accepted!`, {
         position: "top-right",
         autoClose: 2000
@@ -204,13 +204,13 @@ export default function Deliver() {
 
   const sendOtp = async () => {
     try {
-      console.log(acceptedOrder);
+      // console.log(acceptedOrder);
       setLoading(true);
       const callBack = await axios.post("https://eatify-backend.vercel.app/send-otp", {
         email: acceptedOrder.customerEmail, // Make sure customerEmail is available
         orderId: acceptedOrder.id,
       });
-      console.log(callBack.status);
+      // console.log(callBack.status);
 
       if(callBack.status==404)
       {
@@ -230,20 +230,20 @@ export default function Deliver() {
   };
 
   const verifyOtpAndDeliverOrder = async (orderId) => {
-    console.log(orderId);
+    // console.log(orderId);
 
     try {
       setLoading(true);
 
-      console.log("Sending orderId:", acceptedOrder.id);
-      console.log("Sending otp:", otp);
+      // console.log("Sending orderId:", acceptedOrder.id);
+      // console.log("Sending otp:", otp);
 
       const response = await axios.post("https://eatify-backend.vercel.app/verify-otp", {
         orderId: acceptedOrder.id,
         otp: otp,
       });
 
-      console.log("Server Response:", response.data);
+      // console.log("Server Response:", response.data);
 
       if (response.status == 200) {
         setOtpSent(false);

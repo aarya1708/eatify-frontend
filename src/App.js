@@ -32,7 +32,7 @@ function App() {
     if (userToken) {
       try {
         const decodedToken = jwtDecode(userToken); // Decode the token
-        console.log('Decoded token:', decodedToken); // Log the decoded token
+        // console.log('Decoded token:', decodedToken); // Log the decoded token
         setDecoded(decodedToken); // Store decoded token in state
 
         // You can also extract email from the decoded token if it's there
@@ -42,7 +42,7 @@ function App() {
         axios.get('https://eatify-backend.vercel.app/user-auth', { withCredentials: true })
           .then((response) => {
             stopLoading();
-            console.log("User authenticated:", response.data);
+            // console.log("User authenticated:", response.data);
           })
           .catch((error) => {
             stopLoading();
@@ -56,7 +56,7 @@ function App() {
       }
     } else {
       stopLoading();
-      console.log('No token found, redirecting...');
+      // console.log('No token found, redirecting...');
       navigate('/login', { replace: true }); // Redirect to login if no token is found
     }
   }, [navigate]);

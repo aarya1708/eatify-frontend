@@ -15,7 +15,7 @@ function Temptations() {
 
         axios.post("https://eatify-backend.vercel.app/Temptations", { action:'user', email: "temptations@gmail.com" }) 
             .then((response) => {
-                console.log('Rest details received:', response.data);
+                // console.log('Rest details received:', response.data);
                 setRestData(response.data);
                 setMenu(response.data.menu);
             })

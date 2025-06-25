@@ -15,7 +15,7 @@ function Kdh() {
 
         axios.post("https://eatify-backend.vercel.app/Kakke%20Di%20Hatti", {action:'user', email: "kakkedihatti@gmail.com" })  
             .then((response) => {
-                console.log('Rest details received:', response.data);
+                // console.log('Rest details received:', response.data);
                 setRestData(response.data);
                 setMenu(response.data.menu);
             })

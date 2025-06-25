@@ -68,7 +68,7 @@ export default function Menu() {
           setRestData(response.data);
           setMenu(response.data.menu);
           setRestaurantName(encodeURIComponent(response.data.name));
-          console.log(encodeURIComponent(response.data.name));
+          // console.log(encodeURIComponent(response.data.name));
         })
         .catch((error) => {
           console.error(

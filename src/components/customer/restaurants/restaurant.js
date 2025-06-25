@@ -16,11 +16,11 @@ function Restaurant({ anyToggle = {}, setAnyToggle }) {
   const [restaurants, setRestaurants] = useState([]);
 
   useEffect(() => {
-    console.log("Cookies: ", document.cookie);
+    console.log("Cookies: ");
     axios
       .get("https://eatify-backend.vercel.app/restaurants-auth", { withCredentials: true })  // ✅ Required for auth
       .then((response) => {
-        console.log("API Response:", response.data);
+        console.log("API Response:");
 
         if (Array.isArray(response.data)) {  
           setRestaurants(response.data);  // ✅ Set data if it's an array

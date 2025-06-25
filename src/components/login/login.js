@@ -35,7 +35,7 @@ function Login() {
                 email: loginForm.email,
                 password: loginForm.password
             },{ withCredentials: true });
-            console.log(response.data);
+            // console.log(response.data);
             const { token, userType, userName } = response.data;
             const userToken = token;
             localStorage.setItem('userToken', userToken);

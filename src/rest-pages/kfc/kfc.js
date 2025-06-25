@@ -15,7 +15,7 @@ function Kfc() {
 
         axios.post("https://eatify-backend.vercel.app/KFC", { action:'user', email: "kfc@gmail.com" })  
             .then((response) => {
-                console.log('Rest details received:', response.data);
+                // console.log('Rest details received:', response.data);
                 setRestData(response.data);
                 setMenu(response.data.menu);
             })

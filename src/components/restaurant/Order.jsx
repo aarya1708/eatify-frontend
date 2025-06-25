@@ -68,8 +68,8 @@ export default function Order() {
           (a, b) => b.id - a.id
         );
         setPreviousOrders(sortedPreviousOrders);
-        console.log(response.data.orders)
-        console.log(response.data.prevOrders);
+        // console.log(response.data.orders)
+        // console.log(response.data.prevOrders);
       } catch (error) {
         console.error("Axios Error:", error.response?.data || error.message);
       }
@@ -98,7 +98,7 @@ export default function Order() {
 
         // Find the updated order immediately
         let deliveryOrder = updatedOrders.find((order) => order.id === id);
-        console.log("Updated delivery order:", deliveryOrder);
+        // console.log("Updated delivery order:", deliveryOrder);
 
         setCurrentOrders(updatedOrders);
 
@@ -106,7 +106,7 @@ export default function Order() {
           action: "delivery",
           order: deliveryOrder
         })
-          .then((res) => console.log("Order sent to delivery:", res.data))
+          .then((res) => console.log("Order sent to delivery:"))
           .catch((err) => console.error("Error sending order to delivery:", err.response?.data || err.message));
       }
     }
@@ -127,9 +127,9 @@ export default function Order() {
 
     const confirmComplete = window.confirm("Are you sure you want to mark this order as completed?");
     if (!confirmComplete) return;
-    console.log("orderdate check karva", orderToMove)
+    // console.log("orderdate check karva", orderToMove)
     await setprevOrder(orderToMove);
-    console.log(orderToMove);
+    // console.log(orderToMove);
     try {
       const response = await axios.delete(`https://eatify-backend.vercel.app/rest-order`, {
         data: { restaurantName: restaurantName, id: orderToMove.id },

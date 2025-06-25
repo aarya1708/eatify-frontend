@@ -30,7 +30,7 @@ function Profile() {
 
     try {
       const decodedToken = jwtDecode(userToken);
-      console.log('Decoded token:', decodedToken);
+      // console.log('Decoded token:', decodedToken);
 
       const userEmail = decodedToken.email;
       if (!userEmail) {
@@ -41,7 +41,7 @@ function Profile() {
       axios
         .post("https://eatify-backend.vercel.app/profile", { email: userEmail })
         .then((response) => {
-          console.log('User details received:', response.data);
+          // console.log('User details received:', response.data);
           setUserData(response.data);
 
           // Calculate total orders
