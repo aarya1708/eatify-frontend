@@ -65,6 +65,23 @@ You can check out Eatify live here:
 
 Each module is independently authenticated and has tailored functionality as described in the features section.
 
+## 📸 Screenshots
+
+ - 👤 Customer Dashboard
+![Customer Dashboard](./screenshots/customer-dashboard.png)
+
+ - 🍽️ Restaurant Dashboard
+![Restaurant Home Page](./screenshots/restaurant-dashboard.png)
+
+ - 🚴 Delivery Partner Interface
+![Delivery Partner Home Page](./screenshots/delivery-partner-home.png)
+
+ - 🛒 Customer Cart
+![Customer Cart](./screenshots/customer-cart.png)
+
+- 📋 Live Order Management
+![Restaurant Orders](./screenshots/restaurant-orders.png)
+
 ## 📈 Future Enhancements
 
  - AI-based restaurant recommendation system
