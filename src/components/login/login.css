@@ -8,11 +8,13 @@
     display: flex;
 }
 
-.login-box{
+.login-box {
     flex-basis: 65%;
-    align-self: center;
-    align-content: center;
-    justify-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .login-input-btn{
